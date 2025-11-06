@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "Auto YouTube Ad Skipper",
+    "version": "2.0",
+    "description": "Automatically skips skippable YouTube ads and fast-forwards unskippable ads.",
+    "icons": {
+        "16": "icons/toolbar_16.png",
+        "48": "icons/extension_48.png",
+        "128": "icons/store_128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://www.youtube.com/*"],
+            "js": ["content.js"],
+            "run_at": "document_idle"
+        }
+    ],
+    "permissions": [
+        "storage"
+    ],
+    "action": {
+        "default_title": "YouTube Ad Skipper",
+        "default_popup": "popup/popup.html" 
+    }
+}
